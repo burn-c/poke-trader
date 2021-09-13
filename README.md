@@ -1,34 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+  <img alt="Poke Trade" title="Poke Trade" src="./public/logoPokemon.png" width="400px" />
+  <br/>
+  Poke Trade
+</h1>
 
-## Getting Started
+<h3 align="center">
+Faça uma troca justa
+</h3>
+<h5 align="center">
+  Feito com NextJS
+</h5>
 
-First, run the development server:
+<p align="center">
+  <a href="#---instalar-e-executar">Instalar e executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#---live">Acessar App</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
 
-```bash
-npm run dev
-# or
+<hr>
+
+<h1 align="center">
+  ⚙ Instalar e executar
+</h1>
+
+
+1. Clonar repositório:
+
+```sh
+git clone git@github.com:burn-c/poke-trader.git
+```
+2. Instalar as dependências utilizando o comando:
+```sh
+yarn
+```
+3. Configurar ENVs:
+Vamos precisar adicionar duas variáveis ambiente:
+- `FAUNADB_KEY` responsavél pela conexão com nosso banco de dados - [como criar](https://docs.fauna.com/fauna/current/start/)
+   - Basicamente para este projeto só precisamos criar um banco de dados, criar a collection `trades` e criar uma `key` como admin. 
+- `FAIR_PERCENTAGE` valor de 0 a 100 que define a porcentagem de diferença maxima para efetuar o trade.
+
+2. Executar o projeto:
+
+```sh
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## :heavy_check_mark: Regras
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Nesta aplicação você poderar efetuar simular um trade de pokemons entre dois jogadores
+- Maximo de pokemons permitido por jogador: 6
+- Para concluir a troca, a diferença da soma dos XP entre os jogadores não pode ser maior que o definido em `FAIR_PERCENTAGE`, por padrão essa diferença é `10%`
+- Na parte supeior da tela será exibidos avisos avisando se a troca e justa ou não.
+- Todas trocas efetuadas com sucesso estão disponível para consulta na página de `Historico de trades` que podera ser acessa pelo botão `Historico` no canto superior da tela.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 🛠 Tecnologias
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+O projeto foi desenvolvido com as seguintes tecnologias:
 
-## Learn More
+-  [Next.js](https://nextjs.org/)
+-  [FaunaDB](https://fauna.com/)
+-  [Chakra UI](https://chakra-ui.com/)
+-  [ESLint](https://eslint.org/)
+-  [Prettier](https://prettier.io/)
+-  [VS Code](https://code.visualstudio.com/)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## :rocket: Live
+Teste a aplicação e deixe seu feedback
+### [Acessar](https://poke-trade-burn.herokuapp.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Encontrou algum erro ? Tem alguma dica ? Enviei uma pull request! Ficarei feliz em receber! 😁
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with 🔥 by Carlos Oliveira ( BurN  ) - [My linkedin!](https://www.linkedin.com/in/carlosoliveiradev/)
