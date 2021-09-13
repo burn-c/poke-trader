@@ -58,6 +58,7 @@ yarn dev
 O projeto foi desenvolvido com as seguintes tecnologias:
 
 -  [Next.js](https://nextjs.org/)
+-  [Poke API](https://pokeapi.co/docs/v2)
 -  [FaunaDB](https://fauna.com/)
 -  [Chakra UI](https://chakra-ui.com/)
 -  [ESLint](https://eslint.org/)
